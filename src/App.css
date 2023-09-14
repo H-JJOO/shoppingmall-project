@@ -31,11 +31,12 @@
 
 .search-bar {
   display: flex;
-  justify-content: center;
-  margin: 20px;
+  justify-content: flex-end;
+  margin-bottom: 50px;
   border-bottom: 1px solid #000;
   font-size: 20px;
   font-weight: bold;
+  margin-left: 10px;
 }
 
 .search-bar input {
@@ -45,4 +46,13 @@
 
 .search-bar input:focus {
   outline: none;
+}
+
+.product-cusor {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-cusor:hover {
+  transform: scale(1.1);
 }
