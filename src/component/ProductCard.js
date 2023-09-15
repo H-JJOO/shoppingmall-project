@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
   const navigate = useNavigate();
-  // const showDetail = () => {
-  //   // 상세페이지로 이동
-  //   navigate(`/product/${item.id}`);
-  // };
+  const showDetail = () => {
+    // 상세페이지로 이동
+    navigate(`/product/${item.id}`);
+  };
   return (
-    <div className="product-cusor">
+    <div className="product-cusor" onClick={showDetail}>
       <img width={300} src={item.img} />
       <div>{item.title}</div>
       <div>{item.price}</div>

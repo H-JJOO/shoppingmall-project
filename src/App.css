@@ -5,6 +5,13 @@
   cursor: pointer;
 }
 
+.login {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px;
+  cursor: pointer;
+}
+
 .nav-section {
   display: flex;
   justify-content: center;
@@ -55,4 +62,14 @@
 
 .product-cusor:hover {
   transform: scale(1.1);
+}
+
+.product-img {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.info-choice div Button {
+  margin-top: 100px;
+  width: 70%;
 }

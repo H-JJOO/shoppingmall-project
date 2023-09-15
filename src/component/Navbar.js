@@ -6,8 +6,12 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ authenticate, setAuthenticate }) => {
   const navigate = useNavigate();
+
+  const goTologin = () => {
+    navigate("/login");
+  };
 
   const menuList = [
     "여성",
@@ -21,10 +25,19 @@ const Navbar = () => {
   ];
   return (
     <div>
-      <div onClick={() => navigate("/login")} className="login-button">
+      <div className="login">
         <FontAwesomeIcon icon={faUser} />
-        <div>로그인</div>
+        {authenticate ? (
+          <div onClick={() => setAuthenticate(false)}>
+            <span style={{ cursor: "pointer" }}>로그아웃</span>
+          </div>
+        ) : (
+          <div onClick={() => navigate("/login")}>
+            <span style={{ cursor: "pointer" }}>로그인</span>
+          </div>
+        )}
       </div>
+
       <div className="nav-section">
         <img
           onClick={() => navigate("/")}
